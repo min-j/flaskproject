@@ -1,13 +1,35 @@
 <html>
     <head>
-        <title>Welcome!</title>
+        <title>Style-two-words-inator</title>
     </head>
     <body>
-        <h1>Hello world!</h1>
-        <p>We can build a full webpage here</p>
-        <form>
-            <input type="text" name="nickname" placeholder="Enter your nickname"/>
+        <h1>Welcome to the Style-two-words-inator!</h1>
+        <h2>This machine will take any two words and style them how you want!</h2>
+        <form method="POST" action="/index">
+            <label for="words"> Enter two words:</label>
+            <div class="words">
+                <input type="text" name="first" placeholder="Enter one word"/>
+                <input type="text" name="second" placeholder="Enter another word"/>
+            </div>
+            <label for="styles"> Choose a style:</label>
+            <div class="choices">
+                <!-- <select name="cars" size="4" multiple> -->
+                <select name="firstStyle">
+                    <option style="display:none"></option>
+                    <option value="underline">Underline</option>
+                    <option value="bold">Bold</option>
+                    <option value="italicize">Italicize</option>
+                </select>
+                <select name="secondStyle">
+                    <option style="display:none"></option>
+                    <option value="underline">Underline</option>
+                    <option value="bold">Bold</option>
+                    <option value="italicize">Italicize</option>
+                </select>
+            </div>
             <input type="submit" value="Submit"/>
         </form>
+        {{firstWord}}
+        {{secondWord}}
     </body>
 </html>
